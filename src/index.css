@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+    --color-frame: rgba(24, 24, 27, 0.9);
+}
