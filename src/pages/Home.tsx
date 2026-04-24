@@ -5,6 +5,7 @@ import { StyledPanel } from "../components/StyledPanel"
 import { dev, goals, profile } from "../data/Glossaries"
 import { FaCss3Alt, FaDev, FaHtml5, FaJs, FaPython, FaReact } from "react-icons/fa"
 import { StyledIcon } from "../components/StyledIcon"
+import { LuCodeXml } from "react-icons/lu"
 
 export const Home: React.FC = () => {
 
@@ -24,8 +25,11 @@ export const Home: React.FC = () => {
                         </div>
                     </div>
                 </StyledFrame>
-                <div className="bg-frame p-4 rounded-xl text-white relative">
-                    <img className="rounded-xl" src={photo} width={324} height={324} />
+                <div className="bg-frame p-4 rounded-sm text-white relative">
+                    <img className="rounded-sm" src={photo} width={272} height={272} />
+                    <div className="absolute -bottom-4 -right-4 bg-frame px-3 py-1 rounded-sm">
+                        <LuCodeXml size={44} />
+                    </div>
                 </div>
 
                 {/* Segunda Parte */}
