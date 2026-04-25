@@ -1,24 +1,20 @@
+export const footer = () => {
+    return (
+        <span>Designed and programmed by Josué Daniel Tecce</span>
+    )
+}
+
 export const dev = () => {
     return (
-        <div className="grid gap-4">
-            <div>
-                <span>Frontend Developer focused on building clean, functional, and user-friendly interfaces.</span>
-            </div>
-            <div>
-                <span>I have experience developing web applications connected to APIs and databases, with an emphasis on </span>
-                <span className="underline">usability and performance</span>
-                <span>.</span>
-            </div>
-            <div>
-                <span>I have a strong interest in building practical and functional applications and enjoy solving problems, improving user experience, and turning ideas into working products through clean and maintainable code.</span>
-            </div>
-        </div>
+        <span className="italic">
+            Frontend Developer focused on building clean, functional, and user-friendly interfaces.
+        </span>
     )
 }
 
 export const goals = () => {
     return (
-        <div className="grid gap-4">
+        <div className="grid gap-4 italic">
             <div>
                 <span>My goal is to grow as a Frontend Developer, specializing in React and modern web technologies.</span>
             </div>
@@ -33,7 +29,7 @@ export const goals = () => {
 
 export const profile = () => {
     return (
-        <div className="grid gap-4">
+        <div className="grid gap-4 italic">
             <div>
                 <span>I focus on clarity, functionality, and continuous improvement, always looking for better ways to solve problems and optimize development processes.</span>
             </div>
