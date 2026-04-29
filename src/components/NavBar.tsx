@@ -3,15 +3,34 @@ import { StyledButton } from "./StyledButton";
 import { GoCodeReview } from "react-icons/go";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { StyledIcon } from "./StyledIcon";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export function NavBar() {
+    const { language, toggleLanguage } = useLanguage();
+
+    function LanguageBtn() {
+
+        return (
+            <StyledIcon>
+                <button
+                    onClick={toggleLanguage}
+                    className="bg-frame px-3 py-1 rounded text-xs uppercase"
+                >
+                    <div className="flex items-center gap-2 text-white text-xl">
+                        <FaLanguage color="white" size={36} />
+                        {language === 'es' ? "EN" : "ES"}
+                    </div>
+                </button>
+            </StyledIcon>
+        );
+    }
 
     function aboutMe() {
         return (
             <div className="flex items-center gap-2">
                 <FaDev size={36} />
                 <span>
-                    About me
+                    {language === "es" ? "About me" : "Sobre mí"}
                 </span>
             </div>
         )
@@ -22,7 +41,7 @@ export function NavBar() {
             <div className="flex items-center gap-2">
                 <GoCodeReview size={36} />
                 <span>
-                    Projects
+                    {language === "es" ? "Projects" : "Proyectos"}
                 </span>
             </div>
         )
@@ -32,7 +51,7 @@ export function NavBar() {
             <div className="flex items-center gap-2">
                 <MdOutlineAlternateEmail size={36} />
                 <span>
-                    Contact me
+                    {language === "es" ? "Contact me" : "Contáctame"}
                 </span>
             </div>
         )
@@ -49,9 +68,8 @@ export function NavBar() {
                 <StyledButton children={projects()} dir="/projects" />
                 <StyledButton children={contactMe()} dir="/about" />
             </div>
-            <StyledIcon>
-                <FaLanguage color="white" size={36} />
-            </StyledIcon>
+            <LanguageBtn />
         </div>
     )
 }
+

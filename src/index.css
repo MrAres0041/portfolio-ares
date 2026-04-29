@@ -3,4 +3,17 @@
 @theme {
     --color-frame: #1B1B1B;
 
+    /* Definí la animación aquí adentro */
+    --animate-marquee: marquee var(--speed, 30s) linear infinite;
+
+    /* Los keyframes DEBEN estar dentro de @theme en v4 para que Tailwind los gestione */
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
 }
