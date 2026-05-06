@@ -11,6 +11,11 @@ export function ProjectPreview({ project }: { project: Project }) {
                     <span className="text-2xl">{project.title}</span>
                     <img height="300" width="300" src={project.image} />
                     <span className="text-xl">{project.shortDescription}</span>
+                    <div>
+                        {project.tech.map((t) => (
+                            <span key={t} className="pr-2">{t}</span>
+                        ))}
+                    </div>
                 </div>
             </StyledFrame>
         </button>

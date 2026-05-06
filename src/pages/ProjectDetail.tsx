@@ -2,6 +2,7 @@ import { useParams } from 'react-router';
 import { projects } from '../data/Projects';
 import { NavBar } from '../components/NavBar';
 import { StyledFrame } from '../components/StyledFrame';
+import { StyledBody } from '../components/StyledBody';
 
 export function ProjectDetail() {
     const { id } = useParams<{ id: string }>();
@@ -13,7 +14,7 @@ export function ProjectDetail() {
         return <div>Proyecto no encontrado :</div>;
     }
     return (
-        <div className="bg-radial from-orange-100 to-orange-400/50 flex flex-col items-center min-h-screen w-full px-36 py-6 font-serif">
+        <StyledBody>
             <NavBar />
             <div className="flex flex-col items-center pt-6 text-xl gap-6">
 
@@ -77,6 +78,6 @@ export function ProjectDetail() {
                     </div>
                 </StyledFrame>
             </div>
-        </div>
+        </StyledBody>
     );
 }

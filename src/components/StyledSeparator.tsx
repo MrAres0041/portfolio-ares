@@ -8,7 +8,7 @@ export function TechMarquee() {
     const techString = technologies.join(" / ") + " / ";
 
     return (
-        <div className="w-[1200px] my-8 group overflow-hidden bg-frame p-2">
+        <div className="w-full my-8 group overflow-hidden bg-frame p-2">
             {/* 1. AGREGAMOS FLEX: Esto es vital para que los hijos se alineen uno tras otro */}
             <div className="flex w-max animate-marquee whitespace-nowrap py-3 [--speed:40s] group-hover:[animation-play-state:paused] px-2">
 
